@@ -1,0 +1,3 @@
+module SimpleEditable
+  VERSION = "0.0.1"
+end
