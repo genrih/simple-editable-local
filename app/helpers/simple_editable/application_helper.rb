@@ -6,13 +6,13 @@ module SimpleEditable
     # Allowed values for :position in %w(left, right, top, bottom)
     def inline_text(tag, key, default_value, options = {})
       @storage ||= InlineTextStorage.new
-      if current_admin_user.present?
+      if SelfHelper.simple_editable_admin_user.present?
         opts = {
           'contenteditable' => 'true',
           'object'          => 'false',
           'data-text-only'  => options[:text_only],
           'data-pk'         => key,
-          'data-url'        => update_inline_text_path,
+          'data-url'        => simple_editable.update_inline_text_path,
           'class'           => options[:class]
         }
 
@@ -29,14 +29,14 @@ module SimpleEditable
     end
 
     def inline_object(tag, object, attribute, options = {})
-      if current_admin_user.present?
+      if SelfHelper.simple_editable_admin_user.present?
         opts = {
           'contenteditable' => 'true',
           'object'          => 'true',
           'data-attribute'  => attribute,
           'data-id'         => object.id,
           'data-class'      => object.class.to_s,
-          'data-url'        => update_inline_object_path,
+          'data-url'        => simple_editable.update_inline_object_path,
           'class'           => options[:class],
           'data-text-only'  => options[:text_only],
         }
