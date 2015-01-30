@@ -11,11 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150123095307) do
+ActiveRecord::Schema.define(version: 20150130104824) do
 
-  create_table "simple_editable_inline_texts", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "simple_editable_inline_texts", id: false, force: :cascade do |t|
+    t.string "key"
+    t.text   "text"
   end
+
+  add_index "simple_editable_inline_texts", ["key"], name: "index_simple_editable_inline_texts_on_key", unique: true
 
 end
