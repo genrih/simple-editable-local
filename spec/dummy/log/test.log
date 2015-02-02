@@ -231,3 +231,1348 @@ SQLite3::ConstraintException: UNIQUE constraint failed: simple_editable_inline_t
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
   [1m[35m (96.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.3ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: simple_editable_inline_texts.key: INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: simple_editable_inline_texts.key: INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (107.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (103.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (98.0ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (213.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (106.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (110.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (114.7ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (206.6ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.4ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (97.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (186.1ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (138.5ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (101.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (119.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (107.9ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.5ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (143.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.4ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (95.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (97.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (190.3ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.3ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (105.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (188.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (225.6ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (158.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.4ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (115.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (203.5ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (156.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (103.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (135.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (149.0ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (211.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (311.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (219.8ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (213.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.3ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (98.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (197.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (213.3ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (160.1ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (126.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (219.9ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (177.1ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (101.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (322.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (283.1ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (154.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (101.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (97.1ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (188.5ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (121.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (212.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.0ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (228.6ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (164.3ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (119.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (214.3ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (233.4ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (99.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (119.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (110.9ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (168.5ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (116.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (225.3ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (234.1ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (110.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (119.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (122.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (227.4ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (105.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (214.7ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (166.4ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (102.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (111.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (130.1ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (126.4ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (175.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (122.9ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (260.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (103.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (187.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (189.6ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (208.5ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (111.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (96.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (0.9ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (215.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (212.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (234.7ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (124.4ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (103.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (95.1ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (166.1ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (100.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (306.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (188.9ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (194.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (98.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (98.1ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (152.3ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (122.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (266.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (304.3ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.3ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (174.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (96.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (223.8ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (218.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (124.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (119.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (111.8ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (178.5ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (98.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (264.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (222.6ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (100.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (137.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (133.0ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (213.6ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (99.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (198.1ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (169.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (107.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (104.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (108.0ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (280.1ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (114.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (185.3ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (179.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (97.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (136.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (140.2ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (171.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (104.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (104.5ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (208.5ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (102.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (109.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (104.9ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (173.3ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (101.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (203.6ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (175.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (112.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (111.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (113.2ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (144.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (101.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (254.7ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (198.3ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (110.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (120.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (141.7ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.2ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (210.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (108.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (97.2ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (154.2ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (106.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (121.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (104.8ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (184.3ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (123.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (220.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (177.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (115.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (110.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (110.2ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (231.5ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (118.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (175.7ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (168.4ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (109.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (111.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (108.5ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (206.1ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (84.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (200.8ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (295.6ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (140.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (110.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (106.3ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (207.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (103.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (95.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.4ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (187.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (98.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (187.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (166.6ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.2ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (145.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (96.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (99.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.4ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (211.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (142.3ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (126.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (193.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (137.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (262.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (324.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (172.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (109.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (114.5ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (231.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.5ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (148.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (84.0ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (208.5ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (82.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (196.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (198.1ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (184.2ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (108.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (230.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (506.1ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (97.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (107.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (124.2ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (243.5ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (120.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (80.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (228.6ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (111.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (149.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (183.2ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (206.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (117.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (252.8ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (443.2ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (118.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (111.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (108.7ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (199.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.4ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (90.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (226.2ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (320.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.4ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (142.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (104.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (118.9ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (184.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (104.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (180.2ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (195.4ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"asdf"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (97.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (102.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (110.1ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (176.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"Book"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (596.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (191.2ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (475.6ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.4ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"Book"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (165.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (132.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (94.2ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (174.1ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"Book"}
+Completed 500 Internal Server Error in 1ms
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (100.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (173.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (158.6ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.3ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (92.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (102.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (82.8ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.2ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (251.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"Book"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (101.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (80.6ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.2ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (147.5ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (81.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (99.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (110.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (171.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (99.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (224.6ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.2ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (185.2ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (93.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (112.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (99.9ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (184.2ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (81.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (96.1ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (157.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (97.5ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (264.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (180.6ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.5ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (148.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"Book"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (114.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (277.3ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (197.2ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.3ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (97.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (111.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (117.9ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (148.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"RSpec::Mocks::MessageExpectation"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (107.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (109.0ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (130.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"RSpec::Mocks::MessageExpectation"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (82.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (263.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (217.5ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.4ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (118.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.1ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"RSpec::Mocks::MessageExpectation"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (88.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (228.8ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (133.1ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"RSpec::Mocks::MessageExpectation"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36mSimpleEditable::InlineText Load (0.3ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (100.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (112.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (104.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.2ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (220.4ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (101.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (100.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (136.6ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (97.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (280.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (257.7ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (146.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (96.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (222.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (156.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"RSpec::Mocks::InstanceVerifyingDouble"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (111.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (91.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (107.1ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (152.3ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineObjectsController#update as HTML
+  Parameters: {"class_name"=>"RSpec::Mocks::InstanceVerifyingDouble"}
+Completed 500 Internal Server Error in 0ms
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (82.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (233.4ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (138.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+Processing by SimpleEditable::InlineTextsController#update as HTML
+  [1m[36mSimpleEditable::InlineText Load (0.2ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" IS NULL LIMIT 1[0m
+Completed 404 Not Found in 6ms
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "paragraph"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[36m (102.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[35m (105.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[36m (78.7ms)[0m  [1mcommit transaction[0m
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (621.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.3ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[36m (181.6ms)[0m  [1mcommit transaction[0m
+Processing by SimpleEditable::InlineTextsController#update as HTML
+  Parameters: {"pk"=>"title"}
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "title"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 200 OK in 71ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (107.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+SQLite3::ConstraintException: UNIQUE constraint failed: simple_editable_inline_texts.key: INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (144.7ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test"], ["text", "Hello, this is test"]]
+  [1m[36m (95.8ms)[0m  [1mcommit transaction[0m
+Processing by SimpleEditable::InlineTextsController#update as HTML
+  Parameters: {"pk"=>"test"}
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "test"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 200 OK in 15ms (ActiveRecord: 0.3ms)
+  [1m[36mSimpleEditable::InlineText Load (0.1ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (239.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (224.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (249.0ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (537.3ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test"], ["text", "Hello, this is test"]]
+  [1m[36m (185.9ms)[0m  [1mcommit transaction[0m
+Processing by SimpleEditable::InlineTextsController#update as HTML
+  Parameters: {"pk"=>"test"}
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "test"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 200 OK in 14ms (ActiveRecord: 0.4ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (106.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (104.3ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (174.9ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test"], ["text", "Hello, this is test"]]
+  [1m[36m (98.4ms)[0m  [1mcommit transaction[0m
+Processing by SimpleEditable::InlineTextsController#update as HTML
+  Parameters: {"pk"=>"test", "value"=>"New Test"}
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "test"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "simple_editable_inline_texts" SET "text" = ? WHERE "simple_editable_inline_texts"."key" = ?  [["text", "New Test"], ["key", "test"]]
+  [1m[36m (155.0ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 163ms (ActiveRecord: 155.4ms)
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "paragraph"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[36m (103.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[35m (112.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[36m (110.0ms)[0m  [1mcommit transaction[0m
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (159.1ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test"], ["text", "Hello, this is test"]]
+  [1m[36m (96.3ms)[0m  [1mcommit transaction[0m
+Processing by SimpleEditable::InlineTextsController#update as HTML
+  Parameters: {"pk"=>"test", "value"=>"New Test"}
+  [1m[35mSimpleEditable::InlineText Load (0.3ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "test"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "simple_editable_inline_texts" SET "text" = ? WHERE "simple_editable_inline_texts"."key" = ?  [["text", "New Test"], ["key", "test"]]
+  [1m[36m (101.7ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 112ms (ActiveRecord: 102.4ms)
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "test"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (97.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (105.9ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.2ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (102.8ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test"], ["text", "Hello, this is test"]]
+  [1m[36m (105.0ms)[0m  [1mcommit transaction[0m
+Processing by SimpleEditable::InlineTextsController#update as HTML
+  Parameters: {"pk"=>"test", "value"=>"New Test"}
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "test"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "simple_editable_inline_texts" SET "text" = ? WHERE "simple_editable_inline_texts"."key" = ?  [["text", "New Test"], ["key", "test"]]
+  [1m[36m (214.2ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 224ms (ActiveRecord: 214.6ms)
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "test"]]
+  [1m[36mSimpleEditable::InlineText Load (0.1ms)[0m  [1mSELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1[0m  [["key", "paragraph"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[35m (147.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (111.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (102.3ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (119.5ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test"], ["text", "Hello, this is test"]]
+  [1m[36m (81.1ms)[0m  [1mcommit transaction[0m
+Processing by SimpleEditable::InlineTextsController#update as HTML
+  Parameters: {"pk"=>"test", "values"=>"New Test"}
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "test"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Completed 200 OK in 12ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (183.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (210.8ms)[0m  commit transaction
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (126.3ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test"], ["text", "Hello, this is test"]]
+  [1m[36m (80.3ms)[0m  [1mcommit transaction[0m
+Processing by SimpleEditable::InlineTextsController#update as HTML
+  Parameters: {"pk"=>"test", "value"=>"New Test"}
+  [1m[35mSimpleEditable::InlineText Load (0.3ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "test"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "simple_editable_inline_texts" SET "text" = ? WHERE "simple_editable_inline_texts"."key" = ?  [["text", "New Test"], ["key", "test"]]
+  [1m[36m (160.1ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 173ms (ActiveRecord: 160.9ms)
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "paragraph"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "paragraph"], ["text", "This is paragraph"]]
+  [1m[36m (195.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[35m (514.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[36m (198.4ms)[0m  [1mcommit transaction[0m
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36m (163.0ms)[0m  [1mDELETE FROM "simple_editable_inline_texts";[0m
+  [1m[35m (0.2ms)[0m  SELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test"], ["text", "Hello, this is test"]]
+  [1m[36m (99.6ms)[0m  [1mcommit transaction[0m
+Processing by SimpleEditable::InlineTextsController#update as HTML
+  Parameters: {"pk"=>"test", "value"=>"New Test"}
+  [1m[35mSimpleEditable::InlineText Load (0.3ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "test"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "simple_editable_inline_texts" SET "text" = ? WHERE "simple_editable_inline_texts"."key" = ?  [["text", "New Test"], ["key", "test"]]
+  [1m[36m (183.7ms)[0m  [1mcommit transaction[0m
+Completed 200 OK in 197ms (ActiveRecord: 184.4ms)
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT  "simple_editable_inline_texts".* FROM "simple_editable_inline_texts" WHERE "simple_editable_inline_texts"."key" = ? LIMIT 1  [["key", "test"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)  [["key", "test_title"], ["text", "Hello, this is title"]]
+  [1m[36m (167.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "simple_editable_inline_texts" ("key", "text") VALUES (?, ?)[0m  [["key", "title"], ["text", "Hello, this is title"]]
+  [1m[35m (299.6ms)[0m  commit transaction

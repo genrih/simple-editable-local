@@ -33,5 +33,4 @@ Rake::TestTask.new(:test) do |t|
   t.verbose = false
 end
 
-RSpec::Core::RakeTask.new(:spec => 'app:db:test:prepare')
 task default: :test

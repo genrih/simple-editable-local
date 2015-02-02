@@ -53,3 +53,15 @@ Migrating to CreateSimpleEditableInlineTexts (20150130104824)
   [1m[36m (116.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
   [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
   [1m[36m (108.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150130104824')[0m
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.1ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.0ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.1ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
+  [1m[36mSimpleEditable::InlineText Load (1.3ms)[0m  [1mSELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"[0m
+  [1m[35mSimpleEditable::InlineText Load (0.2ms)[0m  SELECT "simple_editable_inline_texts".* FROM "simple_editable_inline_texts"
