@@ -1,3 +1,22 @@
 = SimpleEditable
 
-This project rocks and uses MIT-LICENSE.
+To use this gem:
+* Include it in your gemfile
+* Run bundle install
+* Run generator simple_editable:install
+* Run migrations
+* Add to ApplictionController:  helper SimpleEditable::ApplicationHelper
+
+Now you have some helpers:
+
+inline_object(tag, object, attribute, options = {})
+
+inline_text(tag, key, default_value, options = {})
+
+Example of Usage:
+
+inline_object(:div, obj, :field, class: 'hello-class another-class')
+
+inline_text(:div, 'pages.home.title', 'Hello World', class: 'hello-class another-class', position: 'right')
+
+Allowed values for :position in %w(left, right, top, bottom)

@@ -6,7 +6,7 @@ module SimpleEditable
     # Allowed values for :position in %w(left, right, top, bottom)
     def inline_text(tag, key, default_value, options = {})
       @storage ||= InlineTextStorage.new
-      if SelfHelper.simple_editable_admin_user.present?
+      if simple_editable_admin_user.present?
         opts = {
           'contenteditable' => 'true',
           'object'          => 'false',
@@ -29,7 +29,7 @@ module SimpleEditable
     end
 
     def inline_object(tag, object, attribute, options = {})
-      if SelfHelper.simple_editable_admin_user.present?
+      if simple_editable_admin_user.present?
         opts = {
           'contenteditable' => 'true',
           'object'          => 'true',
@@ -51,6 +51,10 @@ module SimpleEditable
           raw(object.send(attribute))
         end
       end
+    end
+
+    def simple_editable_admin_user
+      SimpleEditable.admin_user ? send(SimpleEditable.admin_user) : true
     end
   end
 end
