@@ -1,8 +1,8 @@
 require 'rails_helper'
 
 module SimpleEditable
-  RSpec.describe SelfHelper, :type => :helper do
-    describe "simple_editable_admin_user" do
+  RSpec.describe SelfHelper, type: :helper do
+    describe 'simple_editable_admin_user' do
       it 'should return true (no auth method)' do
         SimpleEditable.admin_user = false
         expect(SelfHelper.simple_editable_admin_user).to eq(true)
